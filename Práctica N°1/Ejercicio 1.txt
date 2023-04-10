@@ -1,0 +1,60 @@
+Ejercitación 1 - Responder el siguiente cuestionario
+
+1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
+2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos con HTML?
+3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y obsoleto?
+4. Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+5. Qué son los metadatos y cómo se especifican en HTML?
+
+
+
+1.
+    HTML, por sus siglas en inglés, HyperText Markup Language o lenguaje de marcado de hipertexto, es un lenguaje de marcado para la elaboración de las páginas web.
+Es un estándar a cargo del World Wide Web Consortium que sirve de referencia del software que conecta con la elaboración de páginas web en sus diferentes versiones.
+
+    Fue creado a principios de la década de los 90 donde pasó por varias extensiones a lo largo de sus primeros años.
+
+    En 1991, Tim Berners-Lee junto con su equipo describen 18 elementos que incluyen el diseño inicial y relativamente simple de HTML. El HTML 2.0 fue desarrollado ya
+bajo los auspicios de la Internet Engineering Task Force para codificar lo que era la práctica común a finales de 1994. HTML+ (1993) y HTML 3.0 (1995) propusieron
+versiones mucho más ricas de HTML. A pesar de no haber logrado nunca el consenso en las discusiones sobre estándares, estos borradores llevaron a la adopción de 
+un número de nuevas características. Los esfuerzos del Grupo de Trabajo HTML del W3C para codificar la práctica común en 1996 condujeron a HTML 3.2 (1997).
+HTML 4.01 siguió rápidamente más tarde ese mismo año.
+
+    HTML5 es la última versión lanzada y es el principal lenguaje de la web.
+
+
+
+2.
+    Se recomienda a los autores e implementadores seguir con los siguientes principios:
+
+    (1) Separar estructura y presentación
+
+        La experiencia ha demostrado que separando la estructura de un documento de sus aspectos presentacionales se reduce el coste de servir a un amplio espectro de
+plataformas, medios, etc. y se facilitan las revisiones del documento.
+
+    (2) Considerar la accesibilidad universal a la Web
+
+        Los autores deberían considerar cómo pueden representarse sus documentos en diferentes plataformas: navegadores basados en voz, lectores braille, etc.
+Se recomienda entonces que se consideren respresentaciones alternativas de sus diseños.
+        Además los autores deberían incluir en sus documentos información sobre el idioma natural y la dirección del texto, cómo está codificado el documento, y otras
+cuestiones relacionadas con la internacionalización.
+
+    (3) Ayudar a los agentes de usuario con la representación incremental
+
+        Mediante un diseño cuidadoso de las tablas y haciendo uso de las nuevas características de las tablas de HTML 4, los autores pueden ayudar a los agentes de
+usuario a representar los documentos más rápidamente. Los autores pueden aprender a diseñar tablas para su representación incremental.
+
+
+
+3.
+    Un elemento se considera desaprobado cuando queda anticuado por la presencia de estructuras nuevas. Estos elementos se definen en el manual de referencia en los
+lugares apropiados, marcados como desaprobados. Dichos elementos pueden declararse obsoletos en futuras versiones de HTML
+
+    Un elemento se considera obsoleto cuando ya no posee garantía de soporte por parte de un agente de usuario. Estos han dejado de estar definidos en la especificación,
+pero se enumeran por motivos históricos en la sección de cambios del manual de referencia.
+
+
+
+4.
+    El DTD (Document Type Definition, o definición del tipo de documento) define la sintaxis de las estructuras de formato. Puede incluir definiciones adicionales, tales
+como referencias a entidades de caracteres.
