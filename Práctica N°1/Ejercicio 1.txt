@@ -58,3 +58,30 @@ pero se enumeran por motivos históricos en la sección de cambios del manual de
 4.
     El DTD (Document Type Definition, o definición del tipo de documento) define la sintaxis de las estructuras de formato. Puede incluir definiciones adicionales, tales
 como referencias a entidades de caracteres.
+
+    En la especificación de HTML 4.01 se contemplan 3 DTDs:
+    
+        (1) El DTD Estricto que excluye elementos y atributos de presentación que el W3C espera que dejen de utilizarse a medida que madure el soporte de las hojas de
+estilo. Los autores deberían usar el DTD Estricto siempre que sea posible.
+
+        (2) El DTD Transicional de HTML 4.01, si incluye los atributos y elementos de presentación que el W3C espera que dejen de utilizarse a medida que madure el
+soporte de las hojas de estilo. Los autores pueden usar el DTD Transicional si es necesario el soporte de atributos y elementos de presentación.
+
+        (3) El DTD para Documentos con Marcos, que debería emplearse para documentos con marcos. Este es idéntico al Transicional de HTML 4.01, excepto por el modelo de
+contenido del elemento "HTML": en documentos con marcos, el elemento "FRAMESET" reemplaza al elemento "BODY".
+
+
+
+5.
+    Los metadatos son información sobre un documento más que contenido del propio documento. En HTML se permite especificarlos de diferentes maneras. Puede servir, por
+ejemplo, para especificar el autor de un documento.
+
+    La especificación de metadados implica dos pasos:
+
+        (1) Declaración de una propiedad y de un valor para esta propiedad. Puede hacerse de dos maneras:
+            1.- Desde dentro del documento, por medio del elemento META.
+            2.- Desde fuera del documento, vinculando los metadatos por medio del elemento LINK.
+
+        (2) Referencia a un perfil en el que se definen la propiedad y sus valores legales. Para designar un perfil, se usa el atributo "profile" del elemento HEAD.
+
+    Al estar definido un perfil por el elemento HEAD, se aplica el mismo perfil a todos los elementos META y LINK de la cabecera del documento.

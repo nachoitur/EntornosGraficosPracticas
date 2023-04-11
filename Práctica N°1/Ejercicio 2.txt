@@ -1,0 +1,100 @@
+Ejercitación 2
+
+Analizar los siguientes segmentos de código indicando en qué sección del documento HTML se colocan, cuál es el efecto que producen y señalar cada uno de los elementos,
+etiquetas, y atributos (nombre y valor), aclarando si es obligatorio.
+
+
+
+2.a <!-- Código controlado el día 12/08/2009 -->
+
+    La etiqueta de <!-- --> es un comentario, puede ser colocado en cualquier parte del documento y produce que el compilador omita todo lo que se encuentra dentro de este.
+No posee más elementos que su propia denominación y no es obligatorio.
+
+
+
+2.b <div id="bloque1">Contenido del bloque1</div>
+
+    La etiqueta <div> </div> es un elemento genérico sin un significado semántico en particular. Se encuentra dentro del elemento BODY. Su función es agrupar en bloques. El
+atributo id es una denominación específica para dicho elemento, en este caso posee el nombre de "bloque1", este atributo no es obligatorio.
+
+
+
+2.c <img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />
+
+    La etiqueta <img /> es un elemento vacío utilizado para incluir imágenes, éste es un recurso externo que puede ser incrustado en el cuerpo de un documento. Se encuentra
+dentro del elemento BODY. Por si solo no tiene efecto sino que requiere del atributo src para su correcto funcionamiento.
+    El atributo src es obligatorio y es un puntero hacia donde se encuentra dicho recurso a incrustar.
+    El uso del atributo alt representa una buena práctica y provee contenido equivalente para aquellas situaciones en que las imágenes no pueden ser vistas.
+    El atributo id, nuevamente, es una denominación específica para este elemento.
+    El atributo name representa un nombre para el elemento pero este atributo se ha vuelto inválido en HTML5 por tener propósitos visuales únicamente.
+    Los atributos width y height indican, respectivamente, la anchura y altura que tendrá disponible dicha imágen.
+    El atributo longdesc representa el URI de un recurso con una explicación más extensa del contenido/propósito de la imagen que la provista en el atributo alt.
+
+
+
+2.d <meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+    <meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+
+    La etiqueta <meta> provee metadatos que no pueden ser expresados con otros elementos del encabezado. Se encuentra siempre dentro del encabezado (el elemento HEAD). Puede
+ser utilizado de tres maneras diferentes: con el atributo charset, con el atributo name o, con el atributo http-equiv.
+
+    En el primer caso, nos encontramos con el atributo name, en estos casos el elemento provee metadatos a nivel de documento organizados en pares de nombre-valor. El "nombre"
+en este par es provisto por el atributo name y el valor por el atributo content.
+    En los keywords se representa un conjunto de identificadores separados por comas, cada uno de los cuales es una palabra clave que describe de alguna manera los contenidos
+del documento.
+    El atributo lang representa el idioma. En este caso "es" representa el idioma español.
+
+    En el segundo renglón, utilizamos el atributo http-equiv donde el elemento representa una directiva pragma y su tipo es declarado en el atributo http-equiv. Los valores
+para su interpretación son definidos en el atributo content.
+    En este caso se presenta una fecha de expiración, esto quiere decir que el documento tiene fecha de caducidad en la indicada en el content. Una vez pasada esa fecha, el
+navegador no puede solicitar la copia desde la memoria caché sino que debe obtener una nueva del servidor.
+
+
+
+2.e <a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8" rel="help">Resumen HTML </a>
+
+    El elemento <a> </a> representa un hipervínculo el cual enlazaa un trozo de contenido con un recurso generalmente externo. La etiqueta suele encontrarse dentro del elemento
+BODY.
+    El atributo href es el encargado de especificar, mediante un URI, la ubicación del recurso enlazado. En este caso es un enlace externo hacia otra página documento.
+    El atributo type indica el tipo de contenido que se espera que tenga el recurso enlazado. El valor por defecto es "all" (todos).
+    El atributo hreflang representa una etiqueta de lenguaje que identifica al lenguaje que se espera que utilice el documento enlazado. En este caso, nuevamente, se representa
+con "es" para indicar que es el idioma español.
+    El atributo charset representa la codificación de caracteres utilizada por el recurso enlazado. En HTML5 se encuentra obsoleto. En este caso, "utf-8" se utiliza para la 
+codificación de caractéres básicos.
+    El atributo rel representa una lista no ordenada de tipos de vínculos únicos, separados por espacios, que indican el significado que el recurso enlazado tiene para el
+documento actual (el que contiene al vínculo). Este atributo puede contener varios valores. En este caso, "help"  nos indica que es un vínculo a una ayuda contextual.
+
+
+
+2.f <table width="200" summary="Datos correspondientes al ejercicio vencido">
+        <caption align="top"> Título </caption>
+        <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">A</th>
+            <th scope="col">B</th>
+            <th scope="col">C</th>
+        </tr>
+        <tr>
+            <th scope="row">1º</th>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th scope="row">2º</th>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+
+    El elemento <table> </table> representa una tabla. Éstas permiten a los autores representar información tabulada en un documento. Este elemento actúa únicamente como el
+contenedor donde otros elementos pueden ser declarados. Este elemento table se suele encontrar dentro del elemento BODY.
+    El atributo width indica el ancho deseado para toda la tabla.
+    El atributo summary es un resumen del propósito o de la estructura de la tabla.
+    El elemento <caption> </caption> provee un título para la tabla. Su atributo align indica dónde debería el navegador ubicar al título en relación con la tabla.
+    El elemento <tr> </tr> representa una fila de una tabla. Este elemento se encuentra habitualemente conteniendo a una o más celdas.
+    El elemento <th> </th> representa a una celda de encabezado. Sólo puede ser declarado como hijo del elemento <tr>. Posee el atributo scope que representa un grupo de celdas
+para las cuales esta celda brinda información de encabezado. En estos casos se observan los valores "col" para columnas y "row" para filas.
+    El elemento <td> </td> representa a una celda regular y, al igual que el elemento <th> sólo puede ser declarado como hijo de <tr>.
+    &nbsp; es utilizado para mostrar un espacio en blanco.
