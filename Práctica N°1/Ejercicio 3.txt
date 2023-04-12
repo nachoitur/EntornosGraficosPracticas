@@ -30,3 +30,347 @@ hacia donde se encuentre el elemento que posee un id denominado "arriba".
 
         Esta es el elemento denominado "arriba" que es hacia donde se nos redirige cuando clickeamos sobre el hipervínculo anterior. En estos casos se suele poner en
 la parte superior del BODY para que cumpla su función de llevarnos arriba cuando pulsamos sobre el hipervínculo definido anteriormente.
+
+
+
+3.b
+
+    <p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+
+        En este caso se muestra una imagen mediante el elemento img. Por otro lado, se establece un hipervínculo con la URI de Google. Los dos elementos, a pesar de
+estar en la misma etiqueta <p> </p>, no están relacionados entre si.
+
+    <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+
+        Este caso es similar al anterior, la diferencia es que el elemento img se encuentra dentro de la etiqueta <a> </a> para hipervínculos, por lo que podremos
+dirigirnos a la página sólo si clickeamos sobre la imagen. Al estár definido fuera del elemento <a>, el texto "Click aquí" no tiene ningún efecto.
+
+    <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>
+
+        Este segmento de código es prácticamente similar al anterior solo que, ahora, el texto "Click aquí" se encuentra dentro de la etiqueta <a>, por lo que se tendrán
+los mismos efectos tanto al clickear sobre la imagen como sobre el texto. Ambos referencian hacia el mismo vínculo.
+
+    <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>
+
+        En este último caso, se definen 2 etiquetas de hipervínculo. Al tener las dos la referencia al mismo enlace, se dirigen hacia la mísma página, sin embargo, si
+tuvieran referencias distintas, al clickear tanto sobre la imagen como sobre el texto, se tendrían efectos distintos.
+
+
+
+3.c
+
+    <ul>
+        <li>xxx</li>
+        <li>yyy</li>
+        <li>zzz</li>
+    </ul>
+
+        En este caso se usa el elemento <ul> </ul> para hacer una lista no ordenada de los diferentes items ingresados con el elemento <li>.
+
+    <ol>
+        <li>xxx</li>
+        <li>yyy</li>
+        <li>zzz</li>
+    </ol>
+
+        En este caso podemos observar la misma lista pero enumerada, eso se produce ya que se utiliza el elemento <ol> que sirve para realizar listas ordenadas y los items
+se representan en el orden en el que fueron ingresados mediante el elemento <li>.
+
+    <ol>
+        <li>xxx</li>
+    </ol>
+    <ol>
+        <li value="2">yyy</li>
+    </ol>
+    <ol>
+        <li value="3">zzz</li>
+    </ol>
+
+        Similar al caso anterior. En este segmento, se definen diferentes listas ordenadas, si bien podemos observar en el navegador que es igual al caso anterior, la
+forma de realizarla es distinta. En este caso se utiliza el atributo value, que nos sirve para determinar desde qué número la lista ordenada será iniciada. Si hablamos de
+funcionalidad, el código anterior cumple mejor su trabajo que este segmento.
+
+    <blockquote>
+        <p>1. xxx<br />
+        2. yyy<br />
+        3. zzz</p>
+    </blockquote>
+
+        Si lo observamos en el navegador, este código tiene la misma salida que los dos anteriores. En este caso se utiliza el elemento <blockquote> que se utiliza más para
+insertar citas en forma de bloques de contenido. En este caso se enumeran de antemano los elementos y se separan con el elemento <br/>. No es un uso habitual para realizar listas.
+
+
+
+3.d
+
+    <table border="1" width="300">
+        <tr>
+            <th>Columna 1</th>
+            <th>Columna 2</th>
+        </tr>
+        <tr>
+            <td>Celda 1</td>
+            <td>Celda 2</td>
+        </tr>
+        <tr>
+            <td>Celda 3</td>
+            <td>Celda 4</td>
+        </tr>
+    </table>
+
+        Para el primer caso, podemos observar una tabla definida con el elemento <table> con las columnas nombradas con el elemento <th> y las celdas con el elemento <td> y las filas
+separadas mediante el elemento <tr>. Contiene los atributos border que, en este caso, determina que el borde de la tabla tendrá un ancho de 1 píxel; y el atributo width que, para esta
+tabla, nos determina un ancho deseado de la tabla de 300 píxeles
+
+    <table border="1" width="300">
+        <tr>
+            <td><div align="center"><strong>Columna1</strong></div></td>
+            <td><div align="center"><strong>Columna 2</strong></div></td>
+        </tr>
+        <tr>
+            <td>Celda 1</td>
+            <td>Celda 2</td>
+        </tr>
+        <tr>
+            <td>Celda 3</td>
+            <td>Celda 4</td>
+        </tr>
+    </table>
+
+        Este segmento de código se visualiza exactamente igual en el navegador que el anterior. La única diferencia se encuentra en la definición de las celdas de encabezado. Para
+hacer que visualmente sean iguales, se utiliza el elemento <div> para poder usar el atributo align con el valor "center" y centrarlo como si de un <th> se tratase. Además se utiliza
+el elemento <strong> para hacer que el contenido dentro de esta etiqueta posea un énfasis fuerte.
+
+
+
+3.e
+
+    <table width="200">
+        <caption>Título</caption>
+        <tr>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+        <tr>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+    </table>
+
+        Para este primer caso, podemos observar una tabla que presenta un título con el elemento <caption> que nos permite poner un título sobre la tabla. El contenido de la tabla se
+encuentra vacío, se utiliza "&nbsp;" para dejar un espacio en blanco y se rellena el color de la tabla con el atributo de <td> bgcolor.
+
+    <table width="200">
+        <tr>
+            <td colspan="3"><div align="center">Título</div></td>
+        </tr>
+        <tr>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+        <tr>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+    </table>
+
+        Al igual que en el punto anterior, visualmente no se presentan diferencias. Para que se vea igual que al usar el elemento <caption>, se utiliza el elemento <td> con el atributo
+colspan que, si coincide con la cantidad de columnas existentes, nos ocupara toda la parte superior de la tabla. Además se utiliza el elemento <div> para poder aprovechar el atributo
+align y alinear el texto hacia el centro.
+
+
+
+3.f
+
+    <table width="200">
+        <tr>
+            <td colspan="3"><div align="center">Título</div></td>
+        </tr>
+        <tr>
+            <td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+        <tr>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+    </table>
+
+        Se nos presenta una tabla como la del punto anterior. Ahora, tenemos en el primer elemento <td> el atributo de rowspan que, con el valor en 2, hace que el elemento ocupe las 2
+primeras filas. Esto hace que no sea necesario definir 3 celdas para completar la segunda fila sino 2.
+
+    <table width="200">
+        <tr>
+            <td colspan="3"><div align="center">Título</div></td>
+        </tr>
+        <tr>
+            <td colspan="2" bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+        <tr>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+            <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+    </table>
+
+        Caso muy similar al anterior. En este segmento de código en lugar de ocupar las 2 primeras filas en la primera columna, se ocupan las 2 primeras columnas en la primer fila. Esto
+se produce con el atributo colspan, en lugar del atributo rowspan visto anteriormente.
+
+
+
+3.g
+
+    <table width="200" border="1">
+        <tr>
+            <td colspan="3"><div align="center">Título</div></td>
+        </tr>
+        <tr>
+            <td colspan="2"rowspan="2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="50%">&nbsp;</td>
+        </tr>
+    </table>
+
+        En este caso se observa una tabla con la primera celda ocupando 2 columnas y 2 filas. Luego, para la segunda fila se define una sola celda con el elemento <td> y se utiliza el
+atributo width con un valor relativo de "50%" lo que hace que ocupe el 50% del espacio de la tabla.
+
+    <table width="200" border="1" cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="2"><div align="center">Título</div></td>
+        </tr>
+        <tr>
+            <td rowspan="2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="50%">&nbsp;</td>
+        </tr>
+    </table>
+
+        Visualmente similar, en este caso se ocupan los atributos cellpadding y cellspacing que indican el espacio que se deja entre celda y borde y el ancho de espacio entre celdas
+respectivamente. En este caso sólo existen 2 columnas. La primera celda ocupa las 2 primeras filas de la primera columna pero igualmente la celda definida en la segunda fila ocupa el 50%
+del espacio de la tabla.
+
+
+
+3.h
+
+    <form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+        <fieldset>
+            <legend>LOGIN</legend>
+            Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+            Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+        </fieldset>
+        <input type="submit" id="boton1" name="boton1" value="Enviar" />
+    </form>
+
+        Para el primer segmento, tenemos un formulario definido para un login. Inicia con el elemento <fieldset> para representar el conjunto de controles dentro del formulario, se ocupa 
+<legend> para darle un título a este conjunto de controles. Luego, dentro del mismo se definen 2 <input /> "Usuario" y "Clave", las dos con un tipo, id y un nombre, además de tener valores
+predefinidos con el atributo value. Al final del fieldset se coloca otro <input /> con la forma de un botón que, al presionarlo, nos dirige a otro elemento llamado "procesar.php".
+
+    <form id="form2" name="form2" action="" method="get" target="_blank">
+        LOGIN<br />
+        <label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+        <label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+        <input type="submit" id="boton2" name="boton2" value="Enviar" />
+    </form>
+
+    En este caso tenemos otro formulario, sin embargo no está englobado por un <fieldset> sino que está compuesto simplemente por 2 <label> </label> y el <input /> correspondiente. En este
+caso además, el formulario posee método "get" pero no se provee ningún valor en el atributo action. Esto produce que se solo se añada a la URL los valores ingresados en los campos.
+También hay una mínima diferencia respecto de la "Clave" y es que esta no está definida como tipo "password" como en el anterior. Tampoco poseen valores predefinidos
+
+    <form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="post" target="_blank">
+        <fieldset>
+            <legend>LOGIN</legend>
+            Usuario: <input type="text" id="usu3" name="usu3" /><br />
+            Clave: <input type="password" id="clave3" name="clave3" />
+        </fieldset>
+        <input type="reset" id="boton3" name="boton3" value="Enviar" />
+    </form>
+
+    Este último caso es similar al primero, se usan fieldsets e inputs. En este caso el usuario y la clave tampoco tienen valores predefinidos. En este caso, el formulario está definido
+para el envío de un mail. Además se utiliza el atributo enctype que especifica el tipo de codificación a usarse al enviar el formultario, el valor "text/plain" implica que solo los espacios
+son reemplazados por un signo más ('+').
+
+
+
+3.i
+
+    <label>Botón 1
+        <button type="button" name="boton1" id="boton1">
+            <img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+            <b>CLICK AQUÍ</b>
+        </button>
+    </label>
+
+        En el primer caso tenémos un elemento <button> dentro de un <label> al cual se le puede incluir una imagen con el elemento <img> además de poder incluirle un texto con la etiqueta
+<b>.
+
+    <label>Botón 2
+        <input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+    </label>
+
+        En este caso tenemos un <imput> de tipo "button" al cual solo se le agrega un texto.
+
+
+
+3.j
+
+    <p>
+        <label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+        <label><input type="radio" name="opcion" id="Y" value="Y" />Y</label>
+    </p>
+
+        En el primer segmento, tenemos dos <label> donde dentro del mismo hay un <input> de tipo "radio" donde se representa a una opcion perteneciente a un grupo, en el cual no mas de una
+opción puede ser seleccionada al mismo tiempo. Aqui se tienen dos etiqueta, "X" e "Y" y cuando presionamos en una se marca, si queremos presionar en otra, la anterior se desmarca y se marca
+la nueva opción.
+
+    <p>
+        <label><input type="radio" name="opcion1" id="X" value="X" />X</label><br />
+        <label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label>
+    </p>
+
+        En este caso, el nombre para el control es distinto en ambos <label> por lo que se puede decir que pertenecen a distintos grupos, por lo que si presionamos uno y luego otro, ambas
+opciones quedarán marcadas.
+
+
+
+3.k
+
+    <select name="lista">
+        <optgroup label="Caso 1">
+            <option>Mayo</option>
+            <option>Junio</option>
+        </optgroup>
+        <optgroup label="Caso 2">
+            <option>Mayo</option>
+            <option>Junio</option>
+        </optgroup>
+    </select>
+
+        En este punto, se nos presenta el elemento <select> que representa un control que permite al usuario elegir entre un número de opciones. Le damos un nombre con el atributo name.
+Las opciones son presentadas por medio del elemento <option> y las podemos agrupar mediante el elemento <optgroup>. Visualmente es una lista despegable donde podemos seleccionar solo una
+opción perteneciente a una sola agrupación.
+
+    <select name="lista[]" multiple="multiple">
+        <optgroup label=" Caso 1">
+            <option>Mayo</option>
+            <option>Junio</option>
+        </optgroup>
+        <optgroup label=" Caso 2">
+            <option>Mayo</option>
+            <option>Junio</option>
+        </optgroup>
+    </select>
+
+        Para este caso, se presenta el atributo multiple con valor "multiple" lo que nos permite elegir más de una opción. Al estar este atributo presente, el valor del atributo name debe
+terminar con un par de corchetes. En este caso entonces, podemos ver todas las opciones sin necesidad de desplegar la lista y seleccionar más de una opción indistintamente de si pertenecen
+al mismo o a diferentes grupos.
