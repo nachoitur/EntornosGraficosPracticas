@@ -1,0 +1,32 @@
+Ejercitación 3 - En cada caso, explicar las diferencias entre los segmentos de código y sus visualizaciones.
+
+3.a
+
+    <a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+
+        En este caso es un hipervínculo que nos redirecciona hacia la página principal de Google. Se utiliza el elemento <a> para el vínculo y el atributo href
+para indicar hacia qué documento nos dirigimos.
+
+    <a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+
+        Similar al caso anterior. En este segmento, con el atributo target con valor "_blank", nos permite que el vínculo se abra en una nueva pestaña,
+    
+    <a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+
+        En este caso, la etiqueta no tiene un texto donde se pueda clickear así como tampoco posee un cierre (</a>) por lo que este elemento no se puede visualizar,
+ni mucho menos se puede acceder a él.
+    
+    <a href="#">Click aquí para ir a Google</a>
+
+        En este caso, podemos visualizar y clickear sobre el hipervínculo pero, como "#" no nos sirve como referencia válida para redirigirnos a otro documento, no
+se produce cambio alguno.
+
+    <a href="#arriba">Click aquí para volver arriba</a>
+
+        Este segmento de código, distinto a los demás, nos sirve para cuando estemos en cierta parte del documento y cuando clickeamos sobre el enlace, nos lleva
+hacia donde se encuentre el elemento que posee un id denominado "arriba".
+
+    <a name="arriba" id="arriba"></a>
+
+        Esta es el elemento denominado "arriba" que es hacia donde se nos redirige cuando clickeamos sobre el hipervínculo anterior. En estos casos se suele poner en
+la parte superior del BODY para que cumpla su función de llevarnos arriba cuando pulsamos sobre el hipervínculo definido anteriormente.
