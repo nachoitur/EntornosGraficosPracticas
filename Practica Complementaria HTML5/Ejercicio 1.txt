@@ -1,1 +1,57 @@
+Ejercitación 1 - Responder el siguiente cuestionario
 
+1. ¿Ventajas de HTML5?
+2. ¿Por qué utilizarlo?
+3. Nombre ventajas
+
+1 y 3. Ventajas de usar HTML5
+
+    Es gratuito
+
+        No se necesita ningún tipo de programa especial para empezar a programar en HTML5. No necesita ningún software costoso, puede usar un editor de código gratuito como Notepad++ que
+ofrece funciones básicas como diferenciación por color entre etiquetas y contenido.
+
+    Código más ordenado
+
+        Debido a la adición de nuevas etiquetas que ayudan a nombrar partes de la estructura básica de toda página web, así como la eliminación de ciertas etiquetas, el código HTML se puede
+separar fácilmente entre etiquetas y contenido, permitiendo así que el desarrollador pueda trabajar de manera más efectiva y detectar errores de manera más rápida.
+    Las etiquetas son claras y descriptivas, de modo que el desarrollador puede comenzar a codificar sin ningún problema. Es realmente un lenguaje bastante sencillo de comprender en esta
+nueva versión.
+
+    Compatibilidad en navegadores
+
+        Sin importar qué navegador empleen los usuarios el contenido se puede visualizar correctamente. El único problema sería considerar a usuarios que emplean navegadores más antiguos, ya
+que en éstos no todas las nuevas funciones y etiquetas de HTML5 están disponibles.
+
+    Almacenamiento mejorado
+
+        La información nunca se transfiere al servidor. De esta manera, la información se mantiene segura. Asimismo, esta nueva característica permite que la información se mantenga
+almacenada incluso después de haber cerrado el navegador y como funciona desde el lado de cliente, la información se mantiene a salvo incluso si el usuario decide borrar sus cookies. Ya que
+la información se guarda en el navegador del usuario, da muchas más posibilidad a las aplicaciones web como por ejemplo el uso de caché que mejora el tiempo de respuesta de la aplicación.
+
+    HMTL5 y el diseño adaptativo
+
+        HTML5 es compatible con los navegadores móviles, de modo que cada página realizada en HTML5 que se ve en ordenadores, también se puede adaptar a los dispositivos móviles. Esta
+especificación para móviles puede hacerla desde el mismo documento HTML o puede emplear una framework especializada para mejorar la productividad.
+        Se puede acceder a cualquier página o aplicación web desde un dispositivo móvil y la experiencia será igual de buena que al visitar una página web en ordenadores.
+
+
+
+2. ¿Por qué utilizarlo?
+
+    El lenguaje HTML5 se usa para definir la estructura básica de una página web. Sin embargo, una de sus más grandes adiciones en esta nueva versión es poder añadir audio y video sin
+necesidad de usar Flash u otro reproductor multimedia.
+    Por medio de las etiquetas <video> y <audio> de HTML5, permite añadir videos o audio sin necesidad de usar un plugin de tercero. Toda la acción sucede desde el propio navegador, lo que
+puede ayudar a disminuir al tamaño del archivo final de tu página. Los desarrolladores pueden tener acceso a una API que les permitirá determinar cómo estas nuevas etiquetas son presentadas a
+los usuarios.
+    También, pueden subirse videos a páginas de terceros como Vimeo o Youtube e incrustarlos en el nuevo sitio web.
+
+    La geolocalización permite al sitio detectar la ubicación de cada usuario que ingresa al sitio web. Puede tener diversos usos, por ejemplo, para ofrecer opción de idiomas según el lugar
+de ubicación del usuario o para enlazarlo a la página oficial de la marca en el país en el que se encuentra, entre otras opciones útiles que, dependiendo como la use, pueden mejorar la
+experiencia de usuario. Es una característica con la que hay que tener bastante cuidado e informar al cliente al respecto pues de lo contrario, sería una violación a su privacidad.
+
+    También, se pueden crear animaciones en 2D gracias a la etiqueta <canvas>. La API para esta etiqueta permite dibujar elementos en 2D y animarlos. El resultado final bien podría incluirlo
+en la página de inicio del sitio web pues la API da bastante control sobre los elementos. También la API permite añadir eventos de teclado, ratón y cualquier otro mando que desee incluir.
+
+    La gran ventaja de desarrollar aplicaciones HTML5 es que el resultado final es completamente accesible, es decir, se puede acceder a esta aplicación desde un ordenador, tablet o móvil.
+Incluso al cambiar de dispositivo, se puede acceder a la aplicación web mediante la URL respectiva, cosa que no sucede con una aplicación móvil.
