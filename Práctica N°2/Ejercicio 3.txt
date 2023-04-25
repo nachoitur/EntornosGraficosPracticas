@@ -1,0 +1,45 @@
+Ejercicio 3: Analizar el siguiente código señalando declaraciones y aplicaciones de reglas, y su efecto.
+
+p.quitar {
+  color: red;
+}
+
+Esta declaración afecta a los parrafos que pertenezcan a la clase "quitar". Se modifica solo el atributo color que les dará un color rojo con el valor "red".
+
+*.desarrollo {
+  font-size: 8px;
+}
+
+Esta declaración afecta a todas las etiquetas dentro del documento cuya clase sea "desarrollo". Modifica el tamaño de la fuente de dichos elementos a 8 pixeles con el
+valor "8px".
+
+.importante {
+  font-size: 20px;
+}
+
+Esta declaración afecta a los elementos pertenecientes a la clase "importante". Nuevamente modifica el tamaño de la fuente del elemento, en este caso a "20px".
+
+<p class="desarrollo">                                                              // Párrafo perteneciente a la clase "desarrollo", es el único afectado por dicha declaración
+  En este primer párrafo trataremos lo siguiente:
+  <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+
+<p class="quitar">                                                                  // Párrafo perteneciente a la clase "quitar"
+  Este párrafo debe ser quitado de la obra…
+  <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+
+<p >                                                                                // Párrafo que no pertenece a ninguna clase ni tiene ningún id, sus atributos poseen los valores predeterminados
+  En este otro párrafo trataremos otro tema:<br />
+  xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+
+<p class="importante">                                                              // Párrafo perteneciente a la clase "importante"
+  Y este es el párrafo más importante de la obra…
+  <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</ p>
+
+<h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1>         // Header perteneciente a la clase "quitar", como solo se declaro estilo para los párrafos de esta clase, este no se ve afectado
+
+<p class="quitar importante">Se pueden aplicar varias clases a la vez</p>           // Párrafo al que se le aplican 2 estilos diferentes de 2 clases distintas.
+                                                                                       Si hubiera superposición de estilos, tomaría mayor importancia la clase "quitar"

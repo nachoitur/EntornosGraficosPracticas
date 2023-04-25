@@ -1,0 +1,36 @@
+Ejercicio 2: Analizar el siguiente código señalando declaraciones y aplicaciones de reglas, y su efecto.
+
+p#normal {
+  font-family: arial,helvetica;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+Declaración que efecta a los párrafos (elemento <p>) con id="normal". font-family afecta la fuente en la que estará escrito el texto, font-size afectará
+al tamaño de la fuente y font-weight con el valor "bold" nos aplicará el texto en negrita.
+
+*#destacado {
+  border-style: solid;
+  border-color: blue;
+  border-width: 2px;
+}
+
+Esta declaración afecta a todos los elementos que posean id="destacado", donde solo puede existir un id para cada tipo de elemento. Modifica las propiedades de border-style
+que con el valor "solid" nos presenta el borde del elemento con una sola línea continua, la propiedad de boder-color la cual nos cambia el color del borde del elemento a
+azul con el valor "blue" y finalmente la propiedad border-width que nos modifica el ancho del borde a 2 pixeles con el valor "2px".
+
+#distinto {
+  background-color: #9EC7EB;
+  color: red;
+}
+
+Esta declaración tiene el caracter de aplicarse únicamente a un solo elemento que posea el id="distinto". Nos modifica el color de fondo del elemento con background-color y
+el color del texto escrito a rojo con el atributo color.
+
+<p id="normal">Este es un párrafo</p>   // Párrafo con id="normal", se ve afectado justamente porque es un párrafo, si fuese otro elemento, no sería afectado
+
+<p id="destacado">Este es otro párrafo</p>  // Párrafo con id="destacado"
+
+<table id="destacado"><tr><td>Esta es una tabla</td></tr></table>   // Tabla con id="destacado", se ve afectado también porque es un elemento distinto del anterior
+
+<p id="distinto">Este es el último párrafo</p>    // Párrafo con id="distinto"

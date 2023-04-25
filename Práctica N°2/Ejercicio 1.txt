@@ -42,3 +42,55 @@ las ventajas que ofrecen las hojas de estilo al mezclarse el contenido con la pr
 
   - El selector universal: Se denota con "*" y se corresponde con el nombre de cualquier tipo de elemento. Es equivalente con cualquier elemento en la estructura del
 documento.
+    EJ: *{margin: 0;}
+
+  - Selectores de tipo: Se corresponde con el nombre de un tipo de elemento en el lenguaje del documento. Un selector de tipo equivale con c/ instancia del tipo de elemento
+en la estructura del documento.
+    EJ: H1{font-family: sans-serif;}
+
+  - Selectores descendientes: Selectores que se corresponden con un elemento que es descendiente de otro elemento en la estructura del documento. Los selectores de
+descendientes expresan tal relación dentro de un patrón. Se compone de dos o más selectores separados por un espacio en blanco.
+    EJ: H1 EM {color: blue;} (esto quiere decir que todos los EM que únicamente estén dentro de un H1 tendrán color azul)
+
+  - Selector de clase: Forma más común de aplicar estilos. Para aplicarlo, debemos agregar el atributo class al elemento al que queremos darle estilo. Las clases son
+referenciados posteriormente con el punto (.).
+    EJ: <p class="elemento">Hola, soy blanco</p>  (en el documento)
+        .elemento {color: white;}                 (donde sea que declaremos el estilo)
+
+  - Selector de ID: Los lenguajes del documento pueden contener atributos que se declaran como del tipo ID. Lo que hace especial a un atributo del tipo ID es que dos de
+tales atributos no pueden tener el mismo valor; cualquiera sea el lenguaje del documento. Los elementos se referencian con el símbolo hash (#)
+    EJ: <p id="elemento-particular">Hola, soy grande</p>  (en el documento)
+        #elemento-particular{font-size: 200px;}           (donde sea que declaremos el estilo)
+
+
+
+5. Las pseudo-clases clasifican a los elementos basado en características más allá de su nombre, atributos o contenido; en principio, atributos que no pueden deducirse de la
+estructura del documento. Las pseudo-clases pueden ser dinámicas, en el sentido de que un elemento puede adquirir o perder una pseudo-clase a medida que el usuario interactúa
+con el documento.
+Las pseudo-clases no aparecen en el documento fuente o la estructura del documento.
+Las pseudo-clases son permitidas en cualquier lugar dentro de un selector.
+Los nombres de las pseudo-clases no hacen distinción entre mayúsculas y minúsculas.
+Algunas pseudo-clases son mutuamente excluyentes, mientras otras pueden aplicarse simultáneamente al mismo elemento. En caso de reglas conflictivas, el orden de cascada normal
+determina el resultado.
+
+Las más utilizadas aplicadas a vínculos son:
+
+  - La pseudo-clase :link, que se aplica a los vínculos que aún no han sido visitados.
+
+  - Y la pseudo-clase :visited, que se aplica una vez que el vínculo ha sido visitado por el usuario.
+
+Los dos estados son mutuamente excluyentes.
+
+
+
+6. La herencia consiste en que un valor puede ser heredado por los hijos de un elemento en la estructura del documento. Cada propiedad define si un valor se hereda o no.
+Por ejemplo, en el caso de <H1>El título <EM>es</EM> importante!</H1>
+Si no se asigna un color al elemento <EM> pero sí al elemento <H1>, el elemento <EM> dentro heredará el atributo de color del elemento padre.
+Los valores de porcentaje especificados no son heredados; los valores computados sí lo son.
+
+
+
+7. El proceso de cascada en CSS determina las propiedades que se asignarán a c/ elemento de una página. El proceso consiste en que se le asigna una fuerza a cada regla de estilo,
+donde la regla de mayor fuerza tomará preponderancia en caso de aplicarse varias simultáneamente.
+Entonces, cuando se tienen varias reglas CSS que afectan a un mismo elemento, todas deben converger en una serie de estilos en base a las reglas de especificidad, al orden en el
+que aparecen y a su importancia.
