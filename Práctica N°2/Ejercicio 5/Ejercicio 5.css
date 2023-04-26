@@ -36,7 +36,7 @@ h1.importante, h2.importante, h3.importante, h4.importante, h5.importante, h6.im
 
 /* 5. Todos los elementos h1 que especifique el atributo title, cualquiera que sea su valor, deben ser azules. */
 
-h1 [title] {
+h1[title] {
   color: blue;
 }
 
