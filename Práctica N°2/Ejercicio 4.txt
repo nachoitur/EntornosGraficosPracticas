@@ -1,0 +1,54 @@
+Ejercicio 4: Dadas las siguientes declaraciones:
+
+* {color:green; }
+a:link {color:gray }
+a:visited{color:blue }
+a:hover {color:fuchsia }
+a:active {color:red }
+p {font-family: arial,helvetica;font-size: 10px;color:black; }
+.contenido{font-size: 14px;font-weight: bold; }
+
+Analizar los siguientes códigos y comparar sus efectos. Explicar:
+
+3.a
+
+<body>
+<p class="contenido" style="font-weight: normal;">
+Este es un texto ...............</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con un
+enlace</a></td>
+</tr>
+</table>
+</body>
+
+En este segmento de código se empieza con un elemento <p> perteneciente a la clase contenido para el cual se le definió un tamaño de fuente de 14px y que esté en negrita.
+Posteriormente esto es cambiado con el atributo style de manera interna, aplicado directamente al primer elemento, esto hace que tenga más prioridad que la declaración
+anterior. Además se le declara un estilo al elemento <p> el cual determina la fuente utilizada, su tamaño (que es superpuesto con el de la clase "contenido" en este caso) y
+su color que es negro (se superpone con la declaración del selector universal definida en la primera línea).
+Luego se define una tabla donde su contenido se visualiza en color verde ya que en la hoja de estilos definimos universalmente el color verde para cualquier elemento.
+Dentro de dicha tabla, se coloca un hipervínculo con el elemento <a> al cual se le aplican diferentes estilos por medio de las pseudo-clases, estos son, gris para cuando el 
+elemento no haya sido visitado, azul para cuando ya haya sido visitado, fucsia para cuando se pase el mouse por encima y rojo mientras se mantenga activamente presionado
+dicho enlace.
+
+3.b
+
+<body class="contenido">
+<p> Este es un texto................</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con un enlace</a></td>
+</tr>
+</table>
+</body>
+
+Posteriormente se nos presenta este código similar. La diferencia con el mismo es que se le aplica al elemento <body> la clase "contenido" por lo que se aplicará a todo lo
+que podamos visualizar dentro del cuerpo del documento. En este caso, lo que cambiará será la prioridad dada al elemento <p> ya que en el anterior se le dió prioridad al
+estilo definido internamente, en ese caso se le dará mas prioridad al estilo definido externamente para <p> que para el de la clase "contenido".
