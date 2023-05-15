@@ -1,0 +1,41 @@
+Ejercicio 1: En el siguiente código identificar
+  • las variables y su tipo
+  • los operadores
+  • las funciones y sus parámetros
+  • las estructuras de control
+  • cuál es la salida por pantalla
+
+<?php                   // Etiqueta que indica que se va a ejecutar código php
+function doble($i) {    // Definición de una función llamada doble que recibe un parámetro por valor con el nombre de "i"
+  return $i*2;          // La función devuelve el doble del valor recibido
+}
+$a = TRUE;              // Declaración de una variable llamada "a" iniciada con el valor de TRUE
+$b = "xyz";             // Declaración de una variable llamada "b" que se inicia con la cadena "xyz"
+$c = 'xyz';             // Declaración de una variable llamada "c" iniciada con el valor 'xyz' la diferencia está en el uso de las comillas, las comillas dobles permitirán
+                           el uso de interpolación entre variables en la propia cadena y se pueden utilizar diferentes caracteres de escape
+$d = 12;                // Declaración de una variable llamada "d" iniciada con el valor entero 12
+echo gettype($a);       // echo es un comando para la impresión de texto en pantalla, por lo que nos mostrará lo que le pongamos adelante del mismo y gettype() es una función
+                           que obtiene el tipo de la variable ingresada, en el caso de "a" el tipo es boolean y eso será lo que veremos en pantalla
+echo gettype($b);       // En este caso, el tipo de la variable "b" es string
+echo gettype($c);       // Igual que el anterior, indistintamente de que una haya sido declarada entre comillas dobles y otra entre comillas simples, su tipo es string
+echo gettype($d);       // En este caso, el tipo de la variable "d" es integer
+if (is_int($d)) {       // Estructura de control, toma como condición el resultado de usar la función is_int() que determina si el argumento ingresado es un entero, en ese caso
+                           devuelve TRUE, o si no lo es, devuelve FALSE. En este caso es verdadero por lo que las siguientes sentencias se ejecutan
+  $d += 4;              // A la variable "d" se le aplica el operador binario += el cual le suma la cantidad indicada a la derecha, en este caso es 4.
+}
+if (is_string($a)) {    // Estructura de control, en este caso toma como condición la función similar a la anterior, la cual es is_string(), en este caso "a" no es una cadena
+                           por los que nos retornará falso.
+  echo "Cadena: $a";    // En el caso de que hubiese sido verdadero, hubiese mostrado por pantalla la expresión "Cadena: " y la cadena a continuación
+}
+$d = $a ? ++$d : $d*3;  // Se le asigna un nuevo valor a la variable "d" aplicando el operador ternario ? : en el cual se analiza la primera expresión, en este caso es solo la
+                           revisión de la variable booleana "a", si se cumple dicha condición, lo cual sucede en este caso, se ejecuta la segunda sentencia de código, la cual es
+                           un operador unario sobre la variable "d" la cual hace que se le sume en 1 al su valor actual. Para el caso contrario, se ejecutaría la tercera,
+$f = doble($d++);       // Se declara una variable nueva "f" y se le asigna el valor del resultado de la función doble que recibe como argumento el valor de "d", como el operador
+                           unario ++ se encuentra a la derecha de la variable, ese se le aplicará una vez ejecutada la función, por lo que se le envía a la función el valor antiguo
+                           de "d" el cual es, en ese momento, 17.
+$g = $f += 10;          // Nuevamente se declara una nueva variable "g" a la cual se le asigna el valor de "f" que en ese momento es 34, y se le suma 10, por lo que ambas variables
+                           quedarán con el mismo valor
+echo $a, $b, $c, $d, $f , $g; ?>
+
+En la ultima sentencia las salidas por pantalla correspondientes son: 1, xyz, xyz, 18, 44 y 44. Como se puede apreciar, para mostrar los valores booleanos por pantalla, se utiliza el
+1 en representación del TRUE y 0 en representación del FALSE.
