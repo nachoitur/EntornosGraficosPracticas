@@ -1,0 +1,46 @@
+Ejercicio 5: Analizar el siguiente ejemplo: Contador de visitas a una página web
+
+contador.php
+<?
+// Archivo para acumular el numero de visitas
+$archivo = "contador.dat";
+// Abrir el archivo para lectura
+$abrir = fopen($archivo, "r");
+// Leer el contenido del archivo
+$cont = fread($abrir, filesize($archivo));
+// Cerrar el archivo
+fclose($abrir);
+// Abrir nuevamente el archivo para escritura
+$abrir = fopen($archivo, "w");
+// Agregar 1 visita
+$cont = $cont + 1;
+// Guardar la modificación
+$guardar = fwrite($abrir, $cont);
+// Cerrar el archivo
+fclose($abrir);
+// Mostrar el total de visitas
+echo "<font face='arial' size='3'>Cantidad de visitas:".$cont."</font>";
+?>
+
+visitas.php
+<!-- Página que va a contener al contador de visitas -->
+<html>
+<head></head>
+<body>
+<? include("contador.php")?>
+</body>
+</html>
+
+Se crea un archivo de nombre contador.dat que contiene únicamente el valor 0 dentro, para inicializar la primera visita en 1.
+Se empieza asignando a la variable $archivo el archivo correspondiente que vamos a utilizar. Luego asigna un nombre al archivo abierto por medio de
+fopen() con solo apertura ("r"). Luego para leer el contenido del archivo se le asigna a una variable $cont por medio de la lectura del archivo utilizando
+la función fread() por medio de la asignación anterior de $abrir (recurso que apunta al fichero abierto) y lee hasta el tamaño que posea el archivo
+determinado con filesize().
+Una vez leido se utiliza fclose() para cerrar la lectura de ese archivo.
+Luego volvemos a abrir el archivo pero esta vez para su escritura, ya que queremos modificar el valor del contenido (el cual es el contador de vistas).
+Aumentamos en 1 el contador y guardamos la modificación por medio de fwrite donde utilizamos la asignación $abrir en la cual obtuvimos el permiso de
+escritura ("w") y el contenido ya modificado.
+Volvemos a cerrar el archivo usando fclose() y para mostrar el total de vistas utiliza un tag de <font> el cual expone el valor del contenido guardado
+en $cont.
+Así, cada vez que ingresemos, el código dentro de contador.php se ejecutará por lo que cada ingreso equivale al aumento en 1 del contador.
+Este contador de visitas puede ser visualizado entonces cuando ejecutamos visitas.php en un servidor.

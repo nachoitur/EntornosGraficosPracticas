@@ -1,26 +1,29 @@
 Ejercicio 2: Indicar si los siguientes códigos son equivalentes.
 
 (a) Si nos referimos a sus salidas por pantalla, estos códigos producen exactamente los mismos resultados, una secuencia de enteros del 1 a 10.
-La diferencia radica en la forma de realizarlo. La diferencia entre el primero y el segundo es sencilla, el primero realiza toda la sentencia junta del print y de aplicar
-el operador unario ++ mientras que el segundo lo hace en 2 líneas distintas de código. Además de que el primero encierra la sentencia del while entre corchetes y el segundo
-hace uso del endwhile.
-Finalmente, en el tercero se inicializa la variable en 0 y se hace uso del do-while. Al igual que en el primero, todo el proceso se realiza en una sola sentencia, solo que esta vez
-el operador unario se coloca delante de la variable para que se ejecute antes de que se ejecute el print. Finalmente, la terminación de la ejecución es cuando i<10 ya que esta
-comprobación se realiza una vez ejecutado todas las sentencias dentro del do-while.
+La diferencia radica en la forma de realizarlo. La diferencia entre el primero y el segundo es sencilla, el primero realiza toda la sentencia junta del print y de
+aplicar el operador unario ++ mientras que el segundo lo hace en 2 líneas distintas de código. Además de que el primero encierra la sentencia del while entre corchetes
+y el segundo hace uso del endwhile.
+Finalmente, en el tercero se inicializa la variable en 0 y se hace uso del do-while. Al igual que en el primero, todo el proceso se realiza en una sola sentencia,
+solo que esta vez el operador unario se coloca delante de la variable para que se ejecute antes de que se ejecute el print. Finalmente, la terminación de la ejecución
+es cuando i<10 ya que esta comprobación se realiza una vez ejecutado todas las sentencias dentro del do-while.
 
 
 
 (b) Nuevamente, sus salidas por pantalla son exactamente iguales entre si, además de ser la misma salida que en el punto anterior.
-La diferencia se vuelve a encontrar en la forma de escribir el código. El primero de todos, hace uso común de la estructura de un for: Inicializa una variable ($i=1), pone una
-condición ($i<=10) y la vuelve autoincremental (i++). Finalmente escribe la sentencia del print dentro del mismo.
-El segundo (el que se encuentra debajo del anterior), realiza exactamente lo mismo que el anterior, solo que incluye la sentencia del print de la variable dentro de la 3ra expresión,
-haciendo que imprima el resultado y se autoincremente justo después.
-El tercero (el código de en medio) elimina la parte de la condición de terminación del for y la incluye en forma de un if condicional con un break dentro. El resto es exactamente igual
-que el primero.
-Finalmente, el cuarto código restante, elimina todas las sentencias que se encuentran dentro de la declaración de expresiones del for y las distribuye: La declaración e inicialización
-de la variable $i la realiza fuera del código, volviendola global, la condición de terminación se realiza de la misma manera que el anterior y la sentencia de autoincremento la incluye
-debajo del print dentro del for.
+La diferencia se vuelve a encontrar en la forma de escribir el código. El primero de todos, hace uso común de la estructura de un for: Inicializa una variable ($i=1),
+pone una condición ($i<=10) y la vuelve autoincremental (i++). Finalmente escribe la sentencia del print dentro del mismo.
+El segundo (el que se encuentra debajo del anterior), realiza exactamente lo mismo que el anterior, solo que incluye la sentencia del print de la variable dentro
+de la 3ra expresión, haciendo que imprima el resultado y se autoincremente justo después.
+El tercero (el código de en medio) elimina la parte de la condición de terminación del for y la incluye en forma de un if condicional con un break dentro. El resto
+es exactamente igual que el primero.
+Finalmente, el cuarto código restante, elimina todas las sentencias que se encuentran dentro de la declaración de expresiones del for y las distribuye: La declaración
+e inicialización de la variable $i la realiza fuera del código, volviendola global, la condición de terminación se realiza de la misma manera que el anterior y la
+sentencia de autoincremento la incluye debajo del print dentro del for.
 
 
 
-(c)
+(c)En este último caso, el código es similar nuevamente, los dos utilizan estructuras de control diferentes pero representan lo mismo, una variable $i que dependiendo
+del valor que posea (0, 1 o 2) mostrará por pantalla su valor correspondiente. En el primer código se utiliza una anidación de if con elseif y las condiciones son que
+$i sea igual a uno de los valores mencionados. El segundo utiliza la estructura de control switch para la variable $i y dependiendo de su valor, entrará en el case
+correspondiente.

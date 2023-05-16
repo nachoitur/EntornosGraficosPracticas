@@ -1,0 +1,59 @@
+Ejercicio 3: Explicar para qué se utiliza el siguiente código.
+
+(a)
+<html>
+<head><title>Documento 1</title></head>
+<body>
+<?php
+echo "<table width = 90% border = '1' >";
+$row = 5;
+$col = 2;
+for ($r = 1; $r <= $row; $r++) {
+  echo "<tr>";
+  for ($c = 1; $c <= $col;$c++) {
+    echo "<td>&nbsp;</td>\n";
+  }
+  echo "</tr>\n";
+}
+echo "</table>\n";
+?>
+</body></html>
+
+Este código se utiliza para ejecutar código php dentro de un tag de html. Lo que hace el código correspondiente es utilizar la estructura de iteración for
+para hacer un loop de tantas filas como la variable $row indique y dentro del mismo incluir otro for para hacer un loop de tantas columnas como la variable
+$col indique. Haciendo uso del echo para ejecutar las sentencias de html en cada instancia necesaria, en cada vuelta del for de las filas se ejecuta el inicio
+del tag <tr>, el for de las columnas donde en c/u se crea el elemento <td> y cuando finaliza se le da el cierre con el tag </tr>.
+
+
+
+(b)
+
+<html>
+<head><title>Documento 2</title></head>
+<body>
+<?php
+if (!isset($_POST['submit'])) {
+?>
+  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+  Edad: <input name="age" size="2">
+  <input type="submit" name="submit" value="Ir">
+  </form>
+<?php
+  }
+else {
+  $age = $_POST['age'];
+  if ($age >= 21) {
+    echo 'Mayor de edad';
+  }
+  else {
+    echo 'Menor de edad';
+  }
+}
+?>
+</body></html>
+
+En este caso, el código nos permite ingresar una edad y en base a eso nos indica si somos mayores de edad o no (respecto de 21). Esto se consigue por medio
+de comprobar en un if si $_POST['submit'] ya a sido seteado no, en caso de no haber sido, nos muestra un formulario donde podremos ingresar nuestra edad.
+Luego, al presionar en el input que vuelve a llamar a la página, como $_POST['submit'] ya habrá sido seteada nos vamos a la parte del else de la primera
+estructura de control. Lo que hará luego es obtener el valor de la edad ingresada por medio de la variable dentro del array $_POST, 'age' y finalmente por
+medio del if determinar si se es mayor o menor de edad
