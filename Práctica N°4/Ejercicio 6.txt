@@ -1,0 +1,25 @@
+Ejercicio 1 de la sección de arrays y funciones
+
+Indicar si los siguientes códigos son equivalentes.
+
+<?php
+$a = array( 'color' => 'rojo',
+ 'sabor' => 'dulce',
+ 'forma' => 'redonda',
+ 'nombre' => 'manzana',
+ 4
+ );
+?>
+
+<?php
+$a['color'] = 'rojo';
+$a['sabor'] = 'dulce';
+$a['forma'] = 'redonda';
+$a['nombre'] = 'manzana';
+$a[] = 4;
+?>
+
+Ambos códigos muestran la misma salida por pantalla al invocar a los elementos por sus índices correspondientes por lo
+que si son equivalentes. Ambos muestran una construcción de una matriz asociativa donde al final se le incluye un elemento
+extra de forma indexada. Los dos tiran los mismos resultados ya sea al invocar con alguna clave como echo $a[color] (Nos
+muestra 'rojo') o cuando buscamos el primer elemento del índice $a[0] (Nos muestra'4').

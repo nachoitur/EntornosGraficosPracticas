@@ -1,6 +1,6 @@
 Ejercicio 2: Indicar si los siguientes códigos son equivalentes.
 
-(a) Si nos referimos a sus salidas por pantalla, estos códigos producen exactamente los mismos resultados, una secuencia de enteros del 1 a 10.
+(a) Si nos referimos a sus salidas por pantalla, estos códigos son equivalentes, la salida por pantalla es una secuencia de enteros del 1 a 10 (12345678910)
 La diferencia radica en la forma de realizarlo. La diferencia entre el primero y el segundo es sencilla, el primero realiza toda la sentencia junta del print y de
 aplicar el operador unario ++ mientras que el segundo lo hace en 2 líneas distintas de código. Además de que el primero encierra la sentencia del while entre corchetes
 y el segundo hace uso del endwhile.
@@ -10,7 +10,7 @@ es cuando i<10 ya que esta comprobación se realiza una vez ejecutado todas las 
 
 
 
-(b) Nuevamente, sus salidas por pantalla son exactamente iguales entre si, además de ser la misma salida que en el punto anterior.
+(b) Nuevamente, sus salidas por pantalla son exactamente iguales entre si, además de ser la misma salida que en el punto anterior (12345678910).
 La diferencia se vuelve a encontrar en la forma de escribir el código. El primero de todos, hace uso común de la estructura de un for: Inicializa una variable ($i=1),
 pone una condición ($i<=10) y la vuelve autoincremental (i++). Finalmente escribe la sentencia del print dentro del mismo.
 El segundo (el que se encuentra debajo del anterior), realiza exactamente lo mismo que el anterior, solo que incluye la sentencia del print de la variable dentro
@@ -23,7 +23,7 @@ sentencia de autoincremento la incluye debajo del print dentro del for.
 
 
 
-(c)En este último caso, el código es similar nuevamente, los dos utilizan estructuras de control diferentes pero representan lo mismo, una variable $i que dependiendo
+(c)En este último caso, el código es equivalente nuevamente, los dos utilizan estructuras de control diferentes pero representan lo mismo, una variable $i que dependiendo
 del valor que posea (0, 1 o 2) mostrará por pantalla su valor correspondiente. En el primer código se utiliza una anidación de if con elseif y las condiciones son que
 $i sea igual a uno de los valores mencionados. El segundo utiliza la estructura de control switch para la variable $i y dependiendo de su valor, entrará en el case
 correspondiente.
