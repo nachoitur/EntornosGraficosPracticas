@@ -18,3 +18,9 @@ echo " El $flor $color";
 La salida que producirá será imprimir el texto "El" y posteriormente lanzará advertencias de que ni la variable $flor ni la variable $color han sido
 definidas, sin embargo, esto no detendrá la ejecución. Luego, incluirá datos.php y la siguiente sentencia se mostrará por pantalla sin problemas.
 Mostrando "El clavel blanco".
+Finalmente, la salida por pantalla se visualizará así:
+
+El
+El clavel blanco
+
+En conjunto con las advertencias mencionadas anteriormente.

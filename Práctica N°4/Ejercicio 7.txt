@@ -1,0 +1,40 @@
+Ejercicio 2 de la sección de arrays y funciones
+
+En cada caso, indicar las salidas correspondientes.
+
+<?php
+$matriz = array("x" => "bar", 12 => true);
+echo $matriz["x"];
+echo $matriz[12];
+?>
+
+En este primer código, la salida por pantalla es 'bar 1' lo cual tiene sentido ya que denominamos al elemento con valor "bar"
+con la clave "x" y a un elemento booleano TRUE con la clave 12 por lo que al llamarlo tendremos como salida correspondiente
+la palabra "bar" y el valor 1 que se utiliza para representar el valor verdadero en la salida por pantalla.
+
+
+
+<?php
+$matriz = array("unamatriz" => array(6 => 5, 13 => 9, "a" => 42));
+echo $matriz["unamatriz"][6];
+echo $matriz["unamatriz"][13];
+echo $matriz["unamatriz"]["a"];
+?>
+
+Para este segundo código, nuestra salida por pantalla será '5942' ya que en este arreglo multidimensional llamamos al arreglo
+"unamatriz" que se encuentra dentro del arreglo "matriz" e invocamos en orden a los elementos que la conforman con las claves
+correspondientes 6, 13 y "a".
+
+
+
+<?php
+$matriz = array(5 => 1, 12 => 2);
+$matriz[] = 56;
+$matriz["x"] = 42; unset($matriz[5]); unset($matriz);
+?>
+
+Este tercer código no muestra salida por pantalla alguna. Luego de definirla podríamos llamar por clave al elemento "1" o
+al elemento "2" (Con 5 y 12 como claves) o incluso llamar a los elementos que se agregan después, como el "56" por medio del
+índice correspondiente (0) o el "42" por medio de la clave "x". Sin embargo, posteriormente el elemento con clave "5" no podría
+ser accedido pues por medio de unset() el elemento es desligado de la matriz. Al final la matriz ya no podrá ser accedida debido
+a que sería desligada por medio de la función unset().

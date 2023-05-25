@@ -1,0 +1,30 @@
+Ejercicio 4 de la sección de arrays y funciones
+
+Analizar la siguiente función, y escribir un script para probar su funcionamiento. 
+
+function comprobar_nombre_usuario($nombre_usuario){
+ //compruebo que el tamaño del string sea válido.
+ if (strlen($nombre_usuario)<3 || strlen($nombre_usuario)>20){
+    echo $nombre_usuario . " no es válido\n";
+    return false;
+ }
+ //compruebo que los caracteres sean los permitidos
+ $permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
+ for ($i=0; $i<strlen($nombre_usuario); $i++){
+    if (strpos($permitidos, substr($nombre_usuario,$i,1))===false) {
+        echo $nombre_usuario . " no es válido\n";
+        return false;
+    }
+ }
+ echo $nombre_usuario . " es válido\n";
+ return true;
+}
+
+El script de la prueba de su funcionalidad se encuentra en 'prueba.php'.
+La función comprueba que un nombre de usuario ingresado sea válido. Para que esto suceda , el tamaño de la cadena que lo conforma
+no debe ser menor a 3 ni mayor a 20. Esto es lo primero que se comprueba por medio de la función strlen() que mide el tamaño de
+una cadena. Además, para que sea válido, también la cadena debe estar compuesta únicamente de los caracteres que están permitidos
+estos se definen en $permitidos. Esto se realiza por medio de buscar coincidencias entre las cadenas de $permitidos y una subcadena
+de $nombre_usuario realizada con la función substr, la coincidencia se busca por medio de strpos() en cada caracter de la cadena y
+si no se encuentra alguna se devuelve falso.
+Finalmente, si pasa esas dos condiciones, el nombre de usuario será tomado como válido.
