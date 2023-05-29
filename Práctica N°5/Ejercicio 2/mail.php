@@ -7,7 +7,7 @@ $asunto="Comentario de ejercicio 2";
 
 $nombre = $_POST['nombre'];
 $desde= $_POST['email'];
-$mensaje= ""$_POST['mensaje']."\n
+$mensaje= $_POST['mensaje']."\n
 Enviado: $fecha a las $hora\n
 \n";
 
