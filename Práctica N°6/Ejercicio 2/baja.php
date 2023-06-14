@@ -5,7 +5,7 @@
 <body>
     <?php
     include ("conexion.php");
-    $ciudad = $_POST ['ciudad'];
+    $ciudad = $_POST['ciudad'];
     $query = "SELECT * FROM ciudades WHERE ciudad='$ciudad' ";
     $result = mysqli_query($link, $query);
     if(mysqli_num_rows($result) == 0) {

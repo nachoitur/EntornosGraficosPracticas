@@ -6,7 +6,7 @@
     <?php
     include("conexion.php");
     $query = "SELECT * FROM ciudades";
-    $result = mysqli_query($link, $result);
+    $result = mysqli_query($link, $query);
     $registros=mysqli_num_rows($result);
     ?>
     <table border=1>
@@ -25,7 +25,7 @@
             <td><?php echo ($fila['pais']); ?></td>
             <td><?php echo ($fila['habitantes']); ?></td>
             <td><?php echo ($fila['superficie']); ?></td>
-            <td><?php if($fila['tieneMetro'] == 0) { echo ('No')} else { echo('Si')}; ?></td>
+            <td><?php if($fila['tieneMetro'] == 0) { echo ('No');} else { echo('Si');}; ?></td>
         </tr>
         <tr>
             <td colspan="5">

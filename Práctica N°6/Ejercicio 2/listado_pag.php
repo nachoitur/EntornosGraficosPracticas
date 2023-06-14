@@ -15,7 +15,7 @@
         $inicio = ($pagina - 1) * $cant_pags;
     }
     $query = "SELECT * FROM ciudades";
-    $result = mysqli_query($link, $result);
+    $result = mysqli_query($link, $query);
     $registros=mysqli_num_rows($result);
     $total_paginas = ceil($registros/ $cant_pags);
     echo "Numero de registros encontrados: " . $registros . "<br>";
@@ -41,12 +41,12 @@
             <td><?php echo ($fila['pais']); ?></td>
             <td><?php echo ($fila['habitantes']); ?></td>
             <td><?php echo ($fila['superficie']); ?></td>
-            <td><?php if($fila['tieneMetro'] == 0) { echo ('No')} else { echo('Si')}; ?></td>
+            <td><?php if($fila['tieneMetro'] == 0) { echo ('No');} else { echo('Si');}; ?></td>
         </tr>
         <tr>
             <td colspan="5">
                 <?php }
-                mysqli_free_result($vResultado);
+                mysqli_free_result($result);
                 mysqli_close($link);
                 ?>
             </td>
@@ -62,6 +62,6 @@
     ?>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <p align="center"><a href="menu.html">Volver al menú</a></p>
+    <p align="center"><a href="menu.html">Volver al men&uacute;</a></p>
 </body>
 </html>

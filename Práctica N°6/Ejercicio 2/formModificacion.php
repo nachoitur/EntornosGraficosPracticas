@@ -14,7 +14,7 @@
             echo ("<a href='formMod.html'>Volver atrás</a>");
         } else{
     ?>
-    <form action="modificacion.php" method="POST" name="formModi">
+    <form action="modificacion.php" method="post" name="formModi">
         <table width="356">
             <tr>
                 <td width="103"> Ciudad: </td>
@@ -43,7 +43,7 @@
             <tr>
                 <td width="103"> ¿Tiene metro? </td>
                 <td width="243">
-                    <input type="checkbox" name="tieneMetro" <?php if ($fila['tieneMetro'] == 1) {echo('checked')}; ?>>
+                    <input type="checkbox" name="tieneMetro" <?php if ($fila['tieneMetro'] == 1) {echo('checked');}; ?>>
                 </td>
             </tr>
             <tr>
