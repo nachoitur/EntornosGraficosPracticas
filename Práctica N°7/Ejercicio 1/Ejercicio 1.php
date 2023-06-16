@@ -18,7 +18,7 @@ if(isset($_POST["estilo"])){
 </head>
 <body>
   <h1>Bienvenido a la página, elige tu propio estilo</h1>
-  <form action="Ejercicio1.php" method="post"> Seleccionar el estilo que deseas visualizar en la página:
+  <form action="Ejercicio 1.php" method="post"> Seleccionar el estilo que deseas visualizar en la página:
     <br> <br>
     <select name="estilo">
       <option value="amarillo">Amarillo
