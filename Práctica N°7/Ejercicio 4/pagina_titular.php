@@ -6,6 +6,9 @@ if(isset($_POST["titular"])){
   if (isset($_COOKIE["titular"])){
     $titular = $_COOKIE["titular"];
   }
+  else {
+    $titular = null;
+  }
 }
 ?>
 <!DOCTYPE html>
@@ -23,7 +26,7 @@ if(isset($_POST["titular"])){
   <h1>NOTICIAS!!<h1>
   <hr>
   <?php
-    if(isset($_COOKIE["titular"])){
+    if($titular != null){
       switch($titular){
         case "politica":
           ?>
