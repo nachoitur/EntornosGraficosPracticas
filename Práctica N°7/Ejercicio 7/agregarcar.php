@@ -1,8 +1,7 @@
 <?php
     session_start();
     extract($_REQUEST);
-    mysql_connect("localhost","root") or die ("Problemas de conexión a la base de datos");
-    mysql_select_db("base2");
+    include("conexion.php");
     if(!isset($cantidad)){
         $cantidad=1;
     }

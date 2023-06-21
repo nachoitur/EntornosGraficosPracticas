@@ -4,19 +4,18 @@
     <title>Ejercicio 8</title>
 </head>
 <body>
-    <form  action="buscador.php" method="POST" name="formBuscador">
-        <TABLE width="225">
+    <h3>Bienvenido, ingrese una palabra para encontrar las canciones que guste:</h3>
+    <br>
+    <form  action="buscador.php" method="post" name="formBuscador">
+        <table width="225">
             <tr>  
               <td> Palabra: </td>
-              <td> <input type="TEXT"  name="Palabra" size="20" maxlength="40"></td>
+              <td> <input type="text"  name="Palabra" size="20" maxlength="40"></td>
             </tr>
             <tr>
-                <td colspan="2" align="center">
-                    <input TYPE="SUBMIT"  name="Submit" value="Buscar!">
-                    <p><a href="formBuscador.html">Volver al Buscador de Canciones</a></p>  
-                </td>
+                <td colspan="2" align="center"> <input TYPE="SUBMIT"  name="Submit" value="Buscar!"></td>
             </tr>
-        </TABLE>
+        </table>
     </form>
 </body>
 </html>

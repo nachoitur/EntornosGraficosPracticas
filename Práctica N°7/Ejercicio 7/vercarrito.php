@@ -1,6 +1,6 @@
 <?php
 session_start();
-$carro=$_SESSION['carro'];
+$carro = $_SESSION['carro'];
 ?>
 <html>
 <head>

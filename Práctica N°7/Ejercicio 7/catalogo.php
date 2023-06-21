@@ -1,14 +1,13 @@
 <?php
     ob_start("ob_gzhandler");
     session_start();
-    mysql_connect("localhost","root");
-    mysql_select_db("base2");
+    include('conexion.php');
     if(isset($_SESSION['carro'])) {
         $carro=$_SESSION['carro'];
     } else {
         $carro=false;
     }
-    $query=mysql_query("select * from catalogo order by producto asc");
+    $query=mysqli_query($link,"select * from compras order by producto asc");
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,7 +31,7 @@
             title="Ver el contenido del carrito"><img src="vercarrito.gif" width="25" height="21" border="0"></a></td>
         </tr>
     <?php 
-        while($row=mysql_fetch_assoc($qry)){
+        while($row=mysqli_fetch_assoc($query)){
     ?>
         <tr valign="middle" class="catalogo">
             <td><?php echo $row['producto'] ?></td>
@@ -40,10 +39,10 @@
             <td align="center"><?php
     if(!$carro || !isset($carro[md5($row['id'])]['identificador']) || $carro[md5($row['id'])]['identificador']!=md5($row['id'])) { 
             ?><a href="agregacar.php?<?php echo SID ?>&id=<?php echo $row['id'];
-            ?>"><img src="productonoagregado.gif" border="0" title="Agregar al Carrito"></a><?php
+            ?>"><img src="productonoagregado.png" width="25" height="21" border="0" title="Agregar al Carrito"></a><?php
     } else {
             ?><a href="borracar.php?<?php echo SID ?>&id=<?php echo $row['id'];
-            ?>"><img src="productoagregado.gif" border="0" title="Quitar del Carrito"></a><?php
+            ?>"><img src="productoagregado.png" width="25" height="21" border="0" title="Quitar del Carrito"></a><?php
     }
             ?></td>
         </tr><?php } ?>
